@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.CallActivity">
+
+    <WebView
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/webView"/>
+
+    <ImageView android:layout_height="42dp"
+        android:layout_width="42dp"
+        android:id="@+id/endCall"
+        app:srcCompat="@drawable/btn_endcall_normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="42dp"/>
+
+    <ImageView
+        android:layout_height="42dp"
+        android:layout_width="42dp"
+        android:id="@+id/micBtn"
+        app:srcCompat="@drawable/btn_unmute_normal"
+        app:layout_constraintBottom_toBottomOf="@+id/endCall"
+        app:layout_constraintEnd_toStartOf="@+id/endCall"
+        android:layout_marginEnd="16dp"/>
+
+    <ImageView
+        android:layout_height="42dp"
+        android:layout_width="42dp"
+        android:id="@+id/videoBtn"
+        app:srcCompat="@drawable/btn_video_normal"
+        app:layout_constraintBottom_toBottomOf="@+id/endCall"
+        app:layout_constraintTop_toTopOf="@+id/endCall"
+        app:layout_constraintStart_toEndOf="@+id/endCall"
+        android:layout_marginStart="16dp"/>
+
+
+    -<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="wrap_content"
+    app:layout_constraintEnd_toEndOf="parent"
+    android:layout_marginEnd="16dp"
+    app:layout_constraintTop_toTopOf="parent"
+    android:paddingBottom="5dp"
+    android:paddingTop="5dp"
+    android:orientation="horizontal"
+    android:background="@drawable/user_bg"
+    android:layout_marginTop="16dp">
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:layout_height="42dp"
+        android:layout_width="42dp"
+        android:id="@+id/profile"
+        android:src="@drawable/demo_user"
+        android:layout_marginLeft="5dp">
+    </com.mikhaellopez.circularimageview.CircularImageView>
+
+
+    -<LinearLayout
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="20dp"
+    android:layout_gravity="center">
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/name"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:text="Mian Asad Ali"
+        android:fontFamily="@font/roboto_light"/>
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/city" android:textColor="@color/white"
+        android:text="Lahore, Pakistan"
+        android:fontFamily="@font/roboto_light" android:textSize="10sp"/>
+
+</LinearLayout>
+
+</LinearLayout>
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/controls"
+        app:constraint_referenced_ids="endCall,micBtn,videoBtn"/>
+
+    <ImageView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/connectingImage" app:srcCompat="@drawable/reward_blr"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:scaleType="centerCrop"/>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/loadingAnimation"
+        app:layout_constraintStart_toStartOf="@+id/webView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_loop="true" app:lottie_autoPlay="true"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/loadingGroup"
+        app:constraint_referenced_ids="loadingAnimation,connectingImage"
+        android:visibility="visible"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

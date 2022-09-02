@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "922011081792",
+    "project_id": "cideo-98df7",
+    "storage_bucket": "cideo-98df7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:922011081792:android:577880a10446f2c16d93a5",
+        "android_client_info": {
+          "package_name": "com.example.cideo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "922011081792-q2aij2324m7amf3v708nu3n9om52sc7h.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.cideo",
+            "certificate_hash": "630b03a18c5227f03b66987d61ed994fd38f6220"
+          }
+        },
+        {
+          "client_id": "922011081792-de4ii0ncndr96b26ffdiqgbjpjoijs9l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmrru_KyMFklR4GtdFtHP_OP8liw15YKc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "922011081792-de4ii0ncndr96b26ffdiqgbjpjoijs9l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
